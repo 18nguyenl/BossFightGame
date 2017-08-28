@@ -18,12 +18,21 @@ public class moveRight : MonoBehaviour {
 	void Update () {
         playerAnimations.SetFloat("HorizontalVal", movement.velocity.x);
         Debug.Log("not moving");
-        if(Input.GetKey(KeyCode.D)  || Input.GetKeyDown(KeyCode.D) && skeleton.) 
+        if((Input.GetKey(KeyCode.D)  || Input.GetKeyDown(KeyCode.D)) && skeleton.IsTouchingLayers())
         {
-            Debug.Log("moving Right");
-            movement.velocity = new Vector2(3.0f, 10.0f);
+            movement.velocity = new Vector2(3.0f, 25.0f);
             playerAnimations.SetFloat("HorizontalVal", movement.velocity.x);            
+        } else if ((Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space)) && skeleton.IsTouchingLayers()) {
+            movement.velocity = new Vector2(0, 50f);
+            playerAnimations.SetFloat("HorizontalVal", movement.velocity.x); 
+        } else if ((Input.GetKey(KeyCode.A) || Input.GetKeyDown(KeyCode.A)) && skeleton.IsTouchingLayers()) {
+            movement.velocity = new Vector2(-3.0f, 25.0f);
+            playerAnimations.SetFloat("HorizontalVal", movement.velocity.x); 
         }
 		
 	}
+
+    public void OnCollisionEnter2D (Collision2D collision) {
+        
+    }
 }
