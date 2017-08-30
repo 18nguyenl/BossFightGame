@@ -18,12 +18,10 @@ public class scrollingScript : MonoBehaviour {
 	}
 	
 	void ScrollLeft() {
-		transform.GetChild(0).position = new Vector2(-Camera.main.transform.position.x  - 2f, 0);
-		transform.GetChild(1).position = new Vector2(-Camera.main.transform.position.x, 0);
+		transform.position = new Vector2(transform.position.x  - .2f, 0);
 	}
 
 	void ScrollRight() {
-		transform.GetChild(0).position = new Vector2(Camera.main.transform.position.x  + 2f, 0);
-		transform.GetChild(1).position = new Vector2(Camera.main.transform.position.x, 0);
+		transform.position = new Vector2(transform.position.x  + .2f, 0);
 	}
 }
