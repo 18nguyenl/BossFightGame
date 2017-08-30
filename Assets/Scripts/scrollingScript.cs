@@ -10,18 +10,18 @@ public class scrollingScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.Space)) {
+		if (Input.GetKey(KeyCode.A)) {
 			ScrollLeft();
-		} else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.Space)) {
+		} else if (Input.GetKey(KeyCode.D)) {
 			ScrollRight();
 		}
 	}
 	
 	void ScrollLeft() {
-		transform.position = new Vector2(transform.position.x  - .2f, 0);
+		transform.position = new Vector2(transform.position.x  + Camera.main.velocity.x / 12, 0);
 	}
 
 	void ScrollRight() {
-		transform.position = new Vector2(transform.position.x  + .2f, 0);
+		transform.position = new Vector2(transform.position.x  + Camera.main.velocity.x / 12, 0);
 	}
 }
