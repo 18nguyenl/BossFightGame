@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	private Rigidbody2D body;
+	
 	private int health;
 	// Use this for initialization
 	void Start () {
@@ -31,4 +32,13 @@ public class Player : MonoBehaviour {
 			Destroy(collision.gameObject);
 		}
     }
+	
+	void OnParticleCollision(GameObject other) {
+		print("flameball collided");
+		if (other.tag == "enemy attack") {
+			health -= 20;
+			body.velocity = body.velocity + new Vector2(-20f, 5f);
+			Destroy(other);
+		}
+	}
 }

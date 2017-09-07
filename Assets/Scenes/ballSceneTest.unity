@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: {fileID: 1260657597119260, guid: 98cf63d02f12a074d8637fd8a6b39c28, type: 2}
---- !u!1001 &1978065866
+--- !u!1001 &1820949735
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3043,10 +3043,6 @@ Prefab:
     - target: {fileID: 4192845488023174, guid: 98cf63d02f12a074d8637fd8a6b39c28, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1260657597119260, guid: 98cf63d02f12a074d8637fd8a6b39c28, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98cf63d02f12a074d8637fd8a6b39c28, type: 2}
