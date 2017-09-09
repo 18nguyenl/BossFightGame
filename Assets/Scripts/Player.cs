@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	private Rigidbody2D body;
-	
+	[SerializeField]
+	private GameObject gameover;
 	public int health { get; set; }
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,8 @@ public class Player : MonoBehaviour {
 		print(health);
 		ScoreManagement.score += health;
 		if (health < 0) {
-			GameObject.Find("Stalagmite Background").SetActive(false);
 			gameObject.SetActive(false);
+			gameover.SetActive(true);
 		}
 		if (health < 93) {
 			if (Random.Range(1, 100) == 5) {
