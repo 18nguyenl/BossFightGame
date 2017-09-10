@@ -9,7 +9,7 @@ public class Fireball : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Destroy(gameObject, 5.0f);
+		Destroy(gameObject, 3.0f);
 	}
 	
 	// Update is called once per frame
